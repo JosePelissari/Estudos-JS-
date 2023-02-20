@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {      /* body = corpo da página. */
+            background-color: rgb(137, 137, 236);       /* muda a cor do fundo da página.*/
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    /* muda a fonte dos textos página. */
+        }
+
+        #res {      /* puxa o id que você colocou na div */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;     /* muda a fonte dos textos. */
+            font-size: 18pt;        /* muda o tamanho fonte. */
+        }
+        
+        input {
+            border-radius: 5px;     /* deixa a caixa com bordas redondas. */
+            border-color: white;        /* muda a cor da borda. */
+            font-size: 18pt;        /* muda o tamanho da fonte. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1> <!--Título-->
+    <input type="number" name="txtn1" id="txtn1">       <!--Caixa para o usuário colocar somente números.-->
+    <input type="number" name="txtn2" id="txtn2">       <!--Caixa para o usuário colocar somente números.-->
+    <input type="button" value="Somar" onclick="somar()">       <!--Botão que, quando clicado, dispara a função "somar()".-->
+    <div id="res">Resultado</div>       <!--Div.-->
+    <script>
+        function somar() {      // o botão acima foi clicado e agora este código será executado.
+            var tn1 = window.document.getElementById('txtn1')       // puxou a nossa primeira caixa de números, ou seja, tn1 = txtn1.
+            var tn2 = window.document.getElementById('txtn2')       // puxou a nossa segunda caixa de números, ou seja, tn2 = txtn2.
+            var res = window.document.getElementById('res')     // puxou a div, onde sera mostrado o resultado.
+            var n1 = Number(tn1.value)      // puxou o número que o usuário colocou na primeira caixa, ou seja, n1 = número digitado .
+            var n2 = Number(tn2.value)      // puxou o número que o usuário colocou na segunda caixa, ou seja, n2 = número digitado .
+            var s = n1 + n2     // soma a n1 com n2, ou seja, vai somar os números que o usuário colocou na caixa.
+            res.innerHTML = `A soma entre ${n1} mais ${n2} é igual a <strong>${s}</strong>`     // o texto da div(res) vai ser alterado por este texto.
+      } 
+    </script>
+</body>
+</html>

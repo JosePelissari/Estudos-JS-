@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(84, 175, 84), rgb(119, 119, 206));
+        }
+
+        p {
+            font-size: 18pt;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        input {
+            font-size: 18pt;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Seu país é:</h1> <input type="text" name="texto" id="texto">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var brasil = 'Brasil'
+            var text = window.document.querySelector('input#texto')
+            var país = (text.value)
+            var res = window.document.querySelector('div#res')
+            if (país == `${brasil}`) {
+                res.innerHTML = '<p>Você é Brasileiro</p>'
+            } else {
+                res.innerHTML = '<p>Você é Estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>

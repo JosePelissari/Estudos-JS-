@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!--Div-->
+        Interaja... <!--Lugar onde o script vai ser executado -->
+    </div>
+    <script>
+        var a = window.document.getElementById('area')          // puxou a div, ou seja, a = div
+        a.addEventListener('click', clicar)                     // deu uma função a cada interação, no caso aqui, quando tiver um click dispara a função clicar
+        a.addEventListener('mouseenter', entrar)                // quando o mouse entrar na div, a função disparada é a "entrar"
+        a.addEventListener('mouseout', sair)                    // quando o mouse sair na div, a função disparada é a "sair"
+        a.addEventListener('mousemove', mover)                  // quando o mouse estiver movendo dentro da div a função é "mover"
+        function clicar() {                                     // puxamos a função "clicar"
+        a.innerText = 'Clicou'                                  // quando houver o click, o texto "Interaja..." vai ser alterado para "Clicou"
+        a.style.background = 'red'                              // muda a cor do fundo da div para vermelho
+        }
+
+        function entrar() {                                     // puxamos a função "entrar"
+            a.innerText = 'Entrou'                              // quando o mouse entrar na div o texto "Interaja..." vai ser alterado para "Entrou"
+        } 
+
+        function sair() {                                       // puxamos a função "sair"
+            a.innerText = 'Saiu'                                // quando o mouse sair da div o texto vai mudar de "Entrou" para "Saiu"
+            a.style.background = 'green'                        // muda a cor do fundo da div para verde
+        }
+
+        function mover() {                                      // puxamos a função "mover"
+            a.innerText = "Movendo..."                          // quando o mouse se mexer dentro da div o texto é alterado para "Movendo..."
+        }
+    </script>
+</body>
+</html>
