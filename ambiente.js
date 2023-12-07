@@ -1,22 +1,16 @@
-var c = 1
-do {
-console.log(`Passo ${c}`)
-c++ // c = c + 1
-} while (c <= 10) 
+let num = [5, 8, 4]
+num[3] = 6
+num.push(1)
+num.length
+num.sort()
 
+console.log(num)
+console.log(`O vetor tem ${num.length} posições`)
+console.log(`O primeiro valor do vetor é ${num[0]}`)
 
-/* var c = 1
-while (c <= 10) {
-    console.log(`Passo ${c}`)
-    c++ // c = c + 1
+let pos = num.indexOf(8)
+if (pos == -1 ) {
+    console.log('O valor não foi encontrado')
+} else {
+console.log(`O valor 8 está na posição ${pos}`)
 }
- */
-
-
-/* console.log('Tudo bem')
-console.log('Tudo bem')
-console.log('Tudo bem')
-console.log('Tudo bem')           // PIOR SOLUÇÃO
-console.log('Tudo bem')
-console.log('Tudo bem') */
-
